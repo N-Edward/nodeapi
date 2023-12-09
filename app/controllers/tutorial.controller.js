@@ -103,7 +103,7 @@ exports.delete = (req, res) => {
 };
 
 exports.deleteAll = (req, res) => {
-    Tutorial.deletAll((err,data) => {
+    Tutorial.removeall((err,data) => {
         if (err)
         res.status(500).send({
             message:
