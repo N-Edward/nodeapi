@@ -18,8 +18,7 @@ exports.create = (req, res) => {
     Tutorial.create(tutorial, (err, data) => {
         if (err)
         res.status(500).send({
-            message:
-            err.message || "error creating tutorial"
+            message: err.message || "error creating tutorial"
         });
         else res.send(data);
     });
@@ -30,10 +29,9 @@ exports.findAll = (req, res) => {
     Tutorial.getAll(title, (err, data) => {
         if(err)
         res.status(500).send({
-            message:
-            err.message || "error on retrieving tutorials"
+            message: err.message || "error on retrieving tutorials"
         });
-        else res.send(data);
+        else res.send({data:data});
     });
 };
 
